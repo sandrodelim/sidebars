@@ -1,0 +1,107 @@
+html,
+body {
+  text-align: center;
+  background-color: #273559;
+}
+
+nav {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+nav .toggle {
+  height: 100%;
+  width: 100%;
+}
+nav input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+nav input[type=checkbox]:checked ~ ul li:nth-child(1) {
+  transform: rotate(60deg) translate(6em) rotate(-60deg);
+}
+nav input[type=checkbox]:checked ~ ul li:nth-child(2) {
+  transform: rotate(120deg) translate(6em) rotate(-120deg);
+}
+nav input[type=checkbox]:checked ~ ul li:nth-child(3) {
+  transform: rotate(180deg) translate(6em) rotate(-180deg);
+}
+nav input[type=checkbox]:checked ~ ul li:nth-child(4) {
+  transform: rotate(240deg) translate(6em) rotate(-240deg);
+}
+nav input[type=checkbox]:checked ~ ul li:nth-child(5) {
+  transform: rotate(300deg) translate(6em) rotate(-300deg);
+}
+nav input[type=checkbox]:checked ~ ul li:nth-child(6) {
+  transform: rotate(360deg) translate(6em) rotate(-360deg);
+}
+nav input[type=checkbox]:hover ~ .btn {
+  background-color: #1782CC;
+}
+nav .btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #1DA2FF;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 1.25s cubic-bezier(0.8, 0, 0.2, 1), background-color 0.25s;
+  z-index: 9;
+  box-shadow: 0 5px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 0 -5px 15px -1px rgba(104, 193, 255, 0.4), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2);
+}
+nav .btn:after, nav .btn:before {
+  content: "";
+  position: absolute;
+  background-color: #FFF;
+  border-radius: 4px;
+  transition: transform 1.25s cubic-bezier(0.8, 0, 0.2, 1);
+}
+nav .btn:after {
+  width: 40px;
+  height: 8px;
+  top: 56px;
+  left: 40px;
+}
+nav .btn:before {
+  width: 8px;
+  height: 40px;
+  top: 40px;
+  left: 56px;
+}
+nav ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+nav li {
+  transition: transform 1.25s cubic-bezier(0.7, 0, 0.3, 1);
+}
+nav li a {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  line-height: 42px;
+  background-color: #1DA2FF;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.5s;
+}
+nav li a .fa {
+  color: #fff;
+}
+nav li a:hover {
+  background-color: #FF590D;
+}

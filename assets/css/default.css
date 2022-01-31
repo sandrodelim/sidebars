@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --blue: #247D9E;
+    --bg-grey: #2B2E33;
+    --font-black: #222;
+    --font-gray: #BAB5BD
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+li { list-style: none; }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem;
+    border:0px solid green;
+}
+
+.row {
+    display: flex;
+    padding: 0.4em 0;
+    flex-wrap: nowrap;
+}
+.col-1 {
+    position:relative;
+    border:1px solid #eaeaea;
+    min-width:8.3%;
+}
+.col-2 {
+    position:relative;
+    border:1px solid #eaeaea;
+    min-width:16.6%;
+}
+.col-3 {
+    position:relative;
+    border:1px solid #eaeaea;
+    min-width:24.9%;
+}
+.col-9 {
+    position:relative;
+    border:1px solid #eaeaea;
+    min-width:74.7%;
+}
+.col-10 {
+    position:relative;
+    border:1px solid blue;
+    min-width:83%;
+}
+.col-12 {
+    position:relative;
+    border:1px solid green;
+    width:100%;
+}
+
+/* AJUSTES */
+.p-0 {
+    padding: 0;
+}
+.p-1 {
+    padding: 1em;
+}
+.p-2 {
+    padding: 1.2em;
+}
+
+
+
+.justify-start {
+    justify-content: start;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-end {
+    justify-content: end;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-end {
+    align-items: flex-end;
+}
+
+
+.sidebar {
+    position: fixed;  
+    height: 100%;
+    width: 220px;
+    border:0px solid red;
+    background-color: var(--bg-grey);
+}
+
+.dropdown-menu {
+    color: #555;
+    /* border: 1px solid rgba(0, 0, 0, .15); */
+    padding: 0.25rem 0;
+    border-radius: 3px;
+}
+.dropdown-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    color:#eaeaea;
+}
+
+.btn-toggle-menu {
+    position: absolute;
+    right: 0px;   
+}
+.btn-toggle-menu a {
+    color: #eaeaea;
+    display: block;
+    padding: 0px;
+    text-decoration: none;
+    justify-content: flex-end;
+}
+.sidebar ul a {
+    border-left: 5px solid var(--bg-grey);
+}
+.sidebar ul a:hover, 
+.sidebar ul a.active {
+    background-color: #161920;
+    border-color: var(--blue);
+    color: #fff;
+}
