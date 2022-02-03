@@ -7,7 +7,7 @@ const frame = document.getElementById('myFrame')
 let itens = document.querySelectorAll('.dropdown-item');
 itens.forEach(item =>{
     item.addEventListener('click', () => {        
-        frame.style.height = '800px';       
+        frame.style.height = window.height+'px';       
     } );
 }); 
 

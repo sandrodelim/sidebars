@@ -9,67 +9,58 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
-    <input type="checkbox" id="checkbox" checked>
-        <label class="btn" for="checkbox">
-            <ion-icon name="reorder-three-outline"></ion-icon>
-        </label>  
-    <div class="sidebar">         
+
+    <div class="sidebar">  
+        <div class="btn-toggle-menu">
+            <a href="#"> 
+                <span class="icon icon-32"><ion-icon name="menu-outline"></ion-icon></span>
+            </a>
+        </div>  
         <ul class="dropdown-menu">                                        
             <li>                
                 <a class="dropdown-item" href="/bootstrap/index.html" target="myFrame">
-                    <span class="icon">
-                        <ion-icon name="cube-outline"></ion-icon>
-                    </span>BootStrap Sidebar
+                    <span class="icon"><ion-icon name="code-slash-outline"></ion-icon></span>BootStrap Sidebar
                 </a>
             </li>
             <li>
                 <a class="dropdown-item" href="/boxicons/index.html" target="myFrame">
-                    <span class="icon">
-                        <ion-icon name="desktop-outline"></ion-icon>
-                    </span>BoxIcons Sidebar
+                    <span class="icon"><ion-icon name="code-slash-outline"></ion-icon></span>BoxIcons Sidebar
                 </a>
             </li>
             <li>                
                 <a class="dropdown-item" href="/fadein/index.html" target="myFrame">
-                    <span class="icon">
-                        <ion-icon name="cube-outline"></ion-icon>
-                    </span>Fadein Menu
+                    <span class="icon"><ion-icon name="code-slash-outline"></ion-icon></span>Fadein Menu
                 </a>
             </li>
             <li>                
                 <a class="dropdown-item" href="/radial/index.html" target="myFrame">
-                    <span class="icon">
-                        <ion-icon name="desktop-outline"></ion-icon>
-                    </span>Radial Efect
+                    <span class="icon"><ion-icon name="code-slash-outline"></ion-icon></span>Radial Efect
                 </a>
             </li>
             <li>                
                 <a class="dropdown-item" href="/vertical/index.html" target="myFrame">
-                    <span class="icon">
-                        <ion-icon name="calendar-outline"></ion-icon>
-                    </span>Vertical Tradicional
+                    <span class="icon"><ion-icon name="code-slash-outline"></ion-icon></span>Vertical Tradicional
                 </a>
             </li>
             <li>                
                 <a class="dropdown-item" href="/tumblr/index.html" target="myFrame">
-                    <span class="icon">
-                        <ion-icon name="cube-outline"></ion-icon>
-                    </span>Tumblr Efect
+                    <span class="icon"><ion-icon name="code-slash-outline"></ion-icon></span>Tumblr Efect
                 </a>
             </li>
         </ul>
     </div>  
-       
-    <div class="header"  style="margin-left: 220px;">
-        <input type="checkbox" id="checkbox" checked>
-        <label class="btn" for="checkbox">
-            <ion-icon name="reorder-three-outline"></ion-icon>
-        </label>      
-    </div>
-
+          
     <div class="row">
         <div class="col-12" style="margin-left: 240px;">
-            teste
+            <iframe 
+            src="/icofont/index.html"
+            frameborder="0" 
+            scrolling="no" 
+            id="myFrame" 
+            name="myFrame"
+            onload="resizeIframe(this)"
+            title="Sidebar examples">            
+            </iframe>
         </div>
     </div>
 

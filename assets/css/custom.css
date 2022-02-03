@@ -10,16 +10,17 @@ iframe {
     height: 100vh;
 }
 .icon {
-    display: flexbox;
+    display: flex;
+    align-items: center;
 }
 .icon ion-icon {
-    border: 1px solid red;
+    border: 0px solid red;
 
 }
 .icon ion-icon {
-    /* width: 20px;
-    height: 20px; */
-    margin-right: 6px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 .icon-32 ion-icon {
     width: 32px;
