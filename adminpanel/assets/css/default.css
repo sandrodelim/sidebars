@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root {
+    --bg-dark: #2B2E33;
+
+    --blue: #247D9E;
+    --bg-grey: #2B2E33;
+    --font-black: #222;
+    --font-gray: #BAB5BD;
+    --bg-header: #eaeaea;
+
+    --logo-height: 50px;
+    --aside-width: 220px;
+    --header-height: 50px;
+    --footer-height: 30px;
+
+    --shadow: 
+        0 2px 23px 0 rgba(0, 0, 0, 0.1),
+        0 2px 49px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* GRIDLAYOUT BEGIN */
+.app {
+    margin: 0;
+    display: grid;
+    grid-template-columns: var(--aside-width) 1fr;
+    grid-template-rows: 
+         var(--header-height)
+         1fr
+         var(--footer-height);
+    grid-template-areas: 
+        "logo header"
+        "menu content"
+        "menu footer";
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+aside.logo {
+    grid-area: logo;
+}
+header.header {
+    grid-area: header;
+}
+aside.menu-area {
+    grid-area: menu;
+}
+main.content {
+    grid-area: content;
+}
+footer.footer {
+    grid-area: footer;
+    background-color: violet;
+}
+/* GRIDLAYOUT BEGIN */
+
+
+/* LOGO BEGIN */
+aside.logo {
+    background-color: var(--bg-dark);
+    display: flex;
+    padding: 4px 0 0 28px;
+    /* justify-content: center;
+    align-items: center; */
+    color: #fff;
+    width: 100%;
+}
+/* LOGO BEGIN */
+
+
+
+
+/* MENU-AREA BEGIN */
+.menu-area {
+    background-color: var(--bg-grey);
+    padding: 4px;
+    /* transition: transform .3s ease-in-out;
+    transform: translateX(-220px); */
+}
+.menu-area .separador {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 0.4), rgba(0, 0, 0, 0));
+}
+.menu-area  ul {
+    color: #555;
+    /* border: 1px solid rgba(0, 0, 0, .15); */
+    padding: 0.25rem 0;
+    border-radius: 3px;
+}
+.menu-area  ul li a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color:#eaeaea;
+    border-left: 5px solid var(--bg-grey);
+}
+.menu-area  ul li a:hover, 
+.menu-area  ul li a.active {
+    background-color: #161920;
+    border-color: var(--blue);
+    color: #fff;
+}
+.menu-area  ul li .icon {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+/* MENU-AREA END */
+
+
+/* HEADER BEGIN */
+header.header {
+    background-color: var(--bg-header);
+    color: #555;
+}
+/* HEADER BEGIN */
