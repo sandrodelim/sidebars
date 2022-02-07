@@ -13,9 +13,9 @@
     --font-gray: #BAB5BD;
     --bg-header: #eaeaea;
 
-    --logo-height: 50px;
+    --logo-height: 80px;
     --aside-width: 220px;
-    --header-height: 50px;
+    --header-height: 40px;
     --footer-height: 30px;
 
     --shadow: 
@@ -33,7 +33,7 @@
          1fr
          var(--footer-height);
     grid-template-areas: 
-        "logo header"
+        "menu header"
         "menu content"
         "menu footer";
     height: 100vh;
@@ -53,7 +53,6 @@ main.content {
 }
 footer.footer {
     grid-area: footer;
-    background-color: violet;
 }
 /* GRIDLAYOUT BEGIN */
 
@@ -67,6 +66,7 @@ aside.logo {
     align-items: center; */
     color: #fff;
     width: 100%;
+    height: var(--logo-height);
 }
 /* LOGO BEGIN */
 
@@ -76,7 +76,7 @@ aside.logo {
 /* MENU-AREA BEGIN */
 .menu-area {
     background-color: var(--bg-grey);
-    padding: 4px;
+    padding: 0;
     /* transition: transform .3s ease-in-out;
     transform: translateX(-220px); */
 }
@@ -86,11 +86,9 @@ aside.logo {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(150, 150, 150, 0.4), rgba(0, 0, 0, 0));
 }
 .menu-area  ul {
-    color: #555;
-    /* border: 1px solid rgba(0, 0, 0, .15); */
     padding: 0.25rem 0;
     border-radius: 3px;
-}
+}  
 .menu-area  ul li a {
     display: flex;
     align-items: center;
@@ -119,3 +117,18 @@ header.header {
     color: #555;
 }
 /* HEADER BEGIN */
+
+/* CONTENT BEGIN */
+main.content {
+    padding: 20px;
+}
+/* CONTENT BEGIN */
+
+
+
+/* FOOTER BEGIN */
+footer.footer {
+    color:#fff;
+    background-color: var(--bg-dark);
+}
+/* FOOTER BEGIN */
