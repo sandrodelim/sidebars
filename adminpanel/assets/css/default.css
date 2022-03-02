@@ -15,6 +15,7 @@
 
     --logo-height: 80px;
     --aside-width: 220px;
+    --aside-width-mobile: 50px;
     --header-height: 40px;
     --footer-height: 30px;
 
@@ -165,10 +166,12 @@ aside.logo {
   #checkbox-menu:checked + label span:nth-child(3){
     transform: rotate(45deg);
     top:8px;
+    background-color: darkorange;
   }
 
-  #checkbox-menu:checked ~ .menu-area {
-      background-color: red;
+  #checkbox-menu:checked ~ aside.menu-area {
+    width: 400px;
+    border:2px solid darkorange;
   }
 
   /* MENU HAMBURGUER END */
@@ -204,3 +207,38 @@ footer.footer {
     background-color: var(--bg-dark);
 }
 /* FOOTER BEGIN */
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    .app {
+        grid-template-columns: var(--aside-width-mobile) 1fr;
+    }
+    .menu-text {
+        display: none;
+    }
+    .menu-area a.logo img {
+        
+    }
+}
+
+/* MEDIA PRINT BEGIN */
+@media print {
+    .app {
+        grid-template-columns: 1fr;
+        grid-template-rows: 
+             1fr
+             var(--footer-height);
+        grid-template-areas: 
+            "content"
+            "footer";
+        height: 100vh;
+        background-color: #f5f5f5;
+    }
+    header.header, aside {
+        display: none;
+    }
+}
+/* MEDIA PRINT END */
