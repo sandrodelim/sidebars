@@ -3,22 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --blue: #247d9e;
+    --bg-grey: #2B2E33;
+    --bg-grey-hover: #161920;
+    --font-black: #222;
+    --font-gray: #BAB5BD
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .app {
     display: grid;
     grid-template-areas: "sidebar content";
     grid-template-columns: 200px 1fr;
     height: 100vh;
+    transition: 2s;
 }
 
 .sidebar {
     grid-area: sidebar;
-    background-color: #ccc;
+    background-color: var(--bg-grey);
 }
 
 .content {
     grid-area: content;
-    background-color: #eeeeee;
+    background-color: #444;
 }
 
 .header {
@@ -31,12 +43,49 @@
 }
 .btn {
     display: block;
-    background-color: #247D9E;
+    background-color: #777;
     color: #fff;
     width: 40px;
     height: 40px;
     line-height: 45px;
     cursor: pointer;
-    transition: width .3s ease-in-out;
     text-align: center;
+}
+
+/* Efeito Sidebar */
+#checkbox:checked ~ .app {
+    transition: 2s;
+    grid-template-columns: 50px 1fr;
+}
+
+#checkbox:checked ~ .app .sidebar span {
+    display: none;
+}
+
+
+
+
+/* OUTHER EFFECTS*/
+.sidebar a {
+    display: flex;
+    color: #efefef;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0 10px 10px;
+    align-items: center;
+    border-left: 6px solid transparent;
+}
+.sidebar a:hover{
+    background-color: var(--bg-grey-hover);
+    color: #fff;
+    border-color: var(--blue);
+}
+.sidebar a.active{
+    background-color: var(--bg-grey-hover);
+    color: #fff;
+    border-color: var(--blue);
+    opacity: 0.7;
+}
+.sidebar span {
+    margin-left: 10px;
 }

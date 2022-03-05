@@ -69,6 +69,9 @@ aside.logo {
     width: 100%;
     height: var(--logo-height);
 }
+.brand {
+    content:url("../imgs/brand.png");
+}
 /* LOGO BEGIN */
 
 
@@ -113,6 +116,9 @@ aside.logo {
     display: flex;
     align-items: center;
 }
+.menu-area  .menu-text {
+    margin-left: 12px;
+}
 /* MENU-AREA END */
 
 /* MENU HAMBURGUER BEGIN */
@@ -122,17 +128,17 @@ aside.logo {
 #checkbox-menu{
     position: absolute;
     opacity: 0;
-  }
-  
-  label{
+}
+
+label {
     cursor: pointer;
     position: relative;
     display: block;
     height: 20px;
     width: 28px;
-  }
-  
-  label span{
+}
+
+label span{
     position: absolute;
     display: block;
     height: 3px;
@@ -140,40 +146,47 @@ aside.logo {
     border-radius: 30px;
     background: #444;
     transition: 0.25s ease-in-out;
-  }
-  
-  label span:nth-child(1){
+}
+
+label span:nth-child(1){
     top: 0;
-  }
-  
-  label span:nth-child(2){
+}
+
+label span:nth-child(2){
     top: 8px;
-  }
-  
-  label span:nth-child(3){
+}
+
+label span:nth-child(3){
     top: 16px;
-  }
-  
-  #checkbox-menu:checked + label span:nth-child(1){
+}
+
+#checkbox-menu:checked + label span:nth-child(1){
     transform: rotate(-45deg);
     top: 8px;
-  }
-  
-  #checkbox-menu:checked + label span:nth-child(2){
+}
+
+#checkbox-menu:checked + label span:nth-child(2){
     opacity: 0;
-  }
-  
-  #checkbox-menu:checked + label span:nth-child(3){
+}
+
+#checkbox-menu:checked + label span:nth-child(3){
     transform: rotate(45deg);
     top:8px;
     background-color: darkorange;
-  }
+}
 
-  #checkbox-menu:checked ~ aside.menu-area {
-    width: 400px;
-    border:2px solid darkorange;
-  }
-
+#checkbox-menu:checked ~ .app {
+    grid-template-columns: var(--aside-width-mobile) 1fr;
+}
+#checkbox-menu:checked ~ .app aside.menu-area span.menu-text {
+    display: none;
+}
+#checkbox-menu:checked ~ .app .logo {
+    padding: 0;
+}
+#checkbox-menu:checked ~ .app .brand {
+    content:url("../imgs/brand48x48.png");
+}
   /* MENU HAMBURGUER END */
 
 
@@ -219,8 +232,23 @@ footer.footer {
     .menu-text {
         display: none;
     }
-    .menu-area a.logo img {
-        
+    .logo {
+        padding: 0;
+    }
+    .brand {
+        content:url("../imgs/brand48x48.png");
+    }
+    #checkbox-menu:checked ~ .app {
+        grid-template-columns: var(--aside-width) 1fr;
+    }
+    #checkbox-menu:checked ~ .app aside.menu-area span.menu-text {
+        display: block;
+    }
+    #checkbox-menu:checked ~ .app .logo {
+        padding: 4px 0 0 0px;
+    }
+    #checkbox-menu:checked ~ .app .brand {
+        content:url("../imgs/brand.png");
     }
 }
 
